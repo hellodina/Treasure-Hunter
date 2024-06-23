@@ -5,13 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width = device-width, initial-scale =
-    1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = 0,
-    minimal-ui" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style type="text/css">
     body {
       padding: 0px;
       margin: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: 'Roboto', sans-serif;
     }
 
     canvas {
@@ -22,9 +26,31 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
+    #gameRules {
+      width: 80%;
+      max-width: 800px;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 70%;
+      transform: translateY(-50%);
+    }
+
+    #gameRules h2 {
+      font-weight: 700;
+    }
+
+    #gameRules p {
+      font-weight: 400;
+    }
   </style>
 
-  <title>Game Development Path</title>
+  <title>Treasure Hunter</title>
 </head>
 
 <body>
@@ -33,6 +59,11 @@
   <script src="GameScene.js"></script>
   <script src="EndScene.js"></script>
   <script defer src="Game.js"></script>
+
+  <div id="gameRules">
+    <h2>Game Rules</h2>
+    <p>The premise of the game is that there is a grid outlined on the screen. Within that grid, there are plots that have the possibility of containing a golden coin. The player and computer take turns clicking on plots to reveal what is there and the first treasure hunter to get to 5 coins wins the game!</p>
+  </div>
 </body>
 
 </html>
